@@ -1,0 +1,16 @@
+{
+  "name": "onyx-garage-door-repair",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Onyx Garage Door Repair - onyxgaragedoorrepair.site",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve out"
+  },
+  "dependencies": {
+    "next": "^16.3.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}

@@ -1,0 +1,20 @@
+# dependencias
+/node_modules
+
+# build de Next
+/.next
+next-env.d.ts
+
+# OJO: out/ SI se versiona, a proposito. Next aqui es solo la herramienta de
+# build: lo que se sube al hosting es el HTML estatico de out/. Si se ignora,
+# el repo de GitHub no tiene ni una pagina que mirar y el equipo da por hecho
+# que el cambio no se subio. Recompilar con "npm run build" antes de commitear.
+
+# entorno y logs
+.env*.local
+npm-debug.log*
+*.tsbuildinfo
+
+# sistema
+.DS_Store
+Thumbs.db
