@@ -32,7 +32,7 @@ export const site = {
   heroImage: '/img/hero-garage.jpg',
   // El bloque horizontal de la marca, desfondado. Tampoco sale pintado en
   // ninguna pagina: es el logo del JSON-LD, o sea lo que Google usa en la ficha.
-  logo: '/img/logo-onyx.png',
+  logo: '/img/onyx-door-logo.jpg',
   legalUpdated: 'August 31, 2026',
   founded: 2011,
   year: 2026,
