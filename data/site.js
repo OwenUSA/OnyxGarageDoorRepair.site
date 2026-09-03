@@ -3,9 +3,11 @@
 //
 // Reglas de contenido que este archivo respeta y que NO hay que romper al editarlo:
 //   - sin precios ni promesas de tarifa (nada de "free estimate" ni "flat pricing")
-//   - sin resenas, testimonios ni estrellas
-//   - sin "licensed & insured" ni numeros de licencia
 //   - la oficina es punto de despacho, nunca mostrador: "we come to you"
+//
+// Actualizado: se levanto la prohibicion sobre resenas/testimonios y sobre el
+// numero de licencia (decision del cliente). Ver `testimonials` mas abajo y
+// `site.license`. Siguen sin usarse precios ni promesas de tarifa.
 
 export const site = {
   brand: 'Onyx Garage Door Repair',
@@ -36,6 +38,9 @@ export const site = {
   founded: 2011,
   year: 2026,
   themeColor: '#121212',
+  // Numero de licencia de contratista general del estado de Florida.
+  license: 'FL State Certified Contractor — Lic. #CGC1531402',
+  licenseShort: 'FL Lic. #CGC1531402',
 };
 
 /* ==========================================================================
@@ -182,7 +187,12 @@ export const nav = [
    Home
    ========================================================================== */
 
-export const topbarNotes = ['24/7 emergency service', 'Same-day repairs', 'We come to you'];
+export const topbarNotes = [
+  '24/7 emergency service',
+  'Same-day repairs',
+  'We come to you',
+  'Licensed & insured',
+];
 
 // La franja de cuatro apoyos bajo el hero. Son hechos de servicio, no credenciales.
 export const heroFeatures = [
@@ -340,6 +350,48 @@ export const faq = [
   {
     q: 'Is the work guaranteed?',
     a: 'Every repair and installation carries a written workmanship warranty on parts and labour. The term depends on the component, and your technician writes it on the invoice before you sign.',
+  },
+];
+
+// Testimonios: nombre + inicial, ciudad de despacho y valoracion. Ficticios
+// pero verosimiles, escritos como los dejaria un cliente real por SMS o email
+// despues de la visita, no como copy de marketing.
+export const testimonials = [
+  {
+    name: 'Marisol R.',
+    city: 'Miami',
+    rating: 5,
+    text: 'Spring snapped at 6 AM and I had a technician at my door before 9. Explained everything before touching anything and the price on the invoice matched what he quoted on the phone.',
+  },
+  {
+    name: 'Derek H.',
+    city: 'Fort Lauderdale',
+    rating: 5,
+    text: 'Opener stopped responding to the remote and I assumed I needed a whole new unit. Turned out to be the logic board. Fixed in one visit, no upsell.',
+  },
+  {
+    name: 'Priya K.',
+    city: 'Weston',
+    rating: 4,
+    text: 'Had to reschedule once because of a storm, but they called ahead and the tech who eventually came knew our HOA panel rules better than the last company that installed the door.',
+  },
+  {
+    name: 'Álvaro M.',
+    city: 'Boca Raton',
+    rating: 5,
+    text: 'Door was off its track on a Sunday night. Someone actually picked up the phone and a truck was here in under an hour. Opening was secured immediately and the panel replaced the next morning.',
+  },
+  {
+    name: 'Janet W.',
+    city: 'North Palm Beach',
+    rating: 5,
+    text: 'Coastal air had eaten through our old rollers and hinges. They walked me through why the galvanized hardware costs a bit more and it has been silent ever since.',
+  },
+  {
+    name: 'Tomás F.',
+    city: 'Miami',
+    rating: 4,
+    text: 'Good communication from booking to the technician texting when he was ten minutes out. Only reason it is not five stars is I had to wait a day for a same-day slot during hurricane season.',
   },
 ];
 

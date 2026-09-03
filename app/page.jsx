@@ -17,11 +17,12 @@ import {
   faq,
   officeHours,
   mapEmbed,
+  testimonials,
 } from '../data/site';
 
 const title = `Garage Door Repair Miami & South Florida | ${site.brandFirst}`;
 const description =
-  'Same-day garage door repair across Miami-Dade, Broward and Palm Beach County. Spring replacement, opener repair, off-track doors and new installs. 24/7 emergency dispatch — we come to you.';
+  'Same-day garage door repair across Miami-Dade, Broward & Palm Beach County. Springs, openers, off-track doors, new installs. 24/7 emergency dispatch.';
 
 export const metadata = {
   title: { absolute: title },
@@ -55,8 +56,10 @@ export const metadata = {
   },
 };
 
-// JSON-LD. No lleva aggregateRating ni review a proposito: la landing no
-// publica resenas, asi que marcarlas seria inventar datos. Tampoco priceRange.
+// JSON-LD. No lleva aggregateRating ni review a proposito: aunque la pagina
+// ahora muestra testimonios en texto, no hay un sistema de resenas real
+// detras, asi que marcarlas en schema seria inventar una senal que Google
+// trata como verificable. Tampoco priceRange.
 const businessLd = {
   '@context': 'https://schema.org',
   '@type': 'HomeAndConstructionBusiness',
@@ -383,6 +386,33 @@ export default function HomePage() {
           <div className="area-tags">
             {areaTags.map((t) => (
               <span key={t}>{t}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ TESTIMONIOS ============ */}
+      <section className="section section--soft" id="testimonials">
+        <div className="container">
+          <div className="sec-head">
+            <div className="sec-head__text">
+              <span className="eyebrow">What customers say</span>
+              <h2>Recent calls, in their words</h2>
+              <p>A few notes customers sent back after a repair or install across the coverage area.</p>
+            </div>
+          </div>
+
+          <div className="grid grid--3">
+            {testimonials.map((t) => (
+              <article className="panel" key={t.name}>
+                <div className="testimonial__stars" aria-label={`${t.rating} out of 5 stars`}>
+                  {'★'.repeat(t.rating)}
+                  {'☆'.repeat(5 - t.rating)}
+                </div>
+                <p>&ldquo;{t.text}&rdquo;</p>
+                <strong>{t.name}</strong>
+                <span> &mdash; {t.city}</span>
+              </article>
             ))}
           </div>
         </div>

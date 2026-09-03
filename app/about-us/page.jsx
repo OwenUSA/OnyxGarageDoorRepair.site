@@ -14,9 +14,9 @@ import {
   steps,
 } from '../../data/site';
 
-const title = `About ${site.brand} | South Florida Garage Door Company`;
+const title = `About ${site.brandFirst} | South Florida Garage Door Repair Company`;
 const description =
-  'Who we are: a South Florida garage door company dispatching from five points between Miami and North Palm Beach, with our own technicians, written estimates and 24/7 emergency cover.';
+  'A South Florida garage door company dispatching from five points, Miami to North Palm Beach, with our own technicians, written estimates & 24/7 emergency cover.';
 
 export const metadata = {
   title: { absolute: title },
@@ -106,6 +106,7 @@ export default function AboutPage() {
                   Contact us
                 </Link>
               </div>
+              <p className="fineprint">Licensed &amp; insured &mdash; {site.license}.</p>
             </div>
           </div>
         </div>

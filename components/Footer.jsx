@@ -99,11 +99,11 @@ export default function Footer({ city = null, bottomPath = '' }) {
 
         <div className="footer__legalblock">
           <p>
-            {site.brand} is a mobile garage door repair and installation service. The addresses on
-            this site are dispatch points, not retail locations: they are where the trucks start the
-            day, and every repair, installation and estimate takes place at the customer&rsquo;s
-            property. Service availability and arrival times depend on the address, the hour and the
-            work already booked that day.
+            {site.brand} is licensed and insured &mdash; {site.license} &mdash; and a mobile garage
+            door repair and installation service. The addresses on this site are dispatch points, not
+            retail locations: they are where the trucks start the day, and every repair, installation
+            and estimate takes place at the customer&rsquo;s property. Service availability and
+            arrival times depend on the address, the hour and the work already booked that day.
           </p>
           <p>
             Warranty terms vary by component and are written on the invoice before signing. Wind-load

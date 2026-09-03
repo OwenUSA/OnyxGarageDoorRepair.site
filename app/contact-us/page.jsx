@@ -16,7 +16,7 @@ import {
 
 const title = `Contact ${site.brandFirst} | Garage Door Repair South Florida`;
 const description =
-  'Call or email us and a technician drives to your door. One dispatch line for all five points across Miami-Dade, Broward and Palm Beach County, answered 24 hours a day.';
+  'Call or email and a technician drives to your door. One dispatch line for all five points across Miami-Dade, Broward & Palm Beach County, 24 hours a day.';
 
 export const metadata = {
   title: { absolute: title },

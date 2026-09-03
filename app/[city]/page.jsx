@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
   const c = getCity(city);
   if (!c) return {};
   const title = `Garage Door Repair in ${c.name}, FL ${c.zip} | ${site.brandFirst}`;
-  const description = `Same-day garage door repair in ${c.name}, FL. Spring replacement, opener repair, off-track doors and new installs, with 24/7 emergency dispatch. We come to you.`;
+  const description = `Same-day garage door repair in ${c.name}, FL: springs, openers, off-track doors & new installs. 24/7 emergency dispatch — we come to you.`;
   return {
     title: { absolute: title },
     description,

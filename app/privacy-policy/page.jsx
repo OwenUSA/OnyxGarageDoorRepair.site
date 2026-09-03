@@ -11,7 +11,7 @@ import { site, cities, mainOffice } from '../../data/site';
    comprobar antes que sigue cumpliendo. */
 
 const title = 'Privacy Policy';
-const description = `Privacy policy for ${site.brand}: what we collect when you call, text or book a garage door visit in South Florida, how we use it, and how to request deletion.`;
+const description = `Privacy policy for ${site.brand}: what we collect when you call, text or book a visit in South Florida, how we use it & how to request deletion.`;
 
 export const metadata = {
   title,
@@ -22,6 +22,19 @@ export const metadata = {
     title: `${title} | ${site.brand}`,
     description,
     url: '/privacy-policy/',
+    images: [
+      {
+        url: site.heroImage,
+        width: 1200,
+        height: 630,
+        alt: `${site.brand} — garage door repair across South Florida`,
+      },
+    ],
+  },
+  twitter: {
+    title: `${title} | ${site.brand}`,
+    description,
+    images: [site.heroImage],
   },
 };
 
