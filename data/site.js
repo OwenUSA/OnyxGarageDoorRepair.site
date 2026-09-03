@@ -15,19 +15,18 @@ export const site = {
   brandRest: 'Garage Door Repair',
   domain: 'onyxgaragedoorrepair.site',
   url: 'https://onyxgaragedoorrepair.site',
-  // OJO: telefono provisional. Owen pidio prefijo +1 561 y dijo que se cambia mas adelante.
   phone: {
-    href: 'tel:+15613720148',
-    display: '(561) 372-0148',
-    long: '1 (561) 372-0148',
-    schema: '+1-561-372-0148',
+    href: 'tel:+18508526090',
+    display: '(850) 852-6090',
+    long: '1 (850) 852-6090',
+    schema: '+1-850-852-6090',
   },
   email: 'service@onyxgaragedoorrepair.site',
   // OJO: correo de privacidad provisional, sustituir por el real antes de publicar
   privacyEmail: 'privacy@onyxgaragedoorrepair.site',
   hoursLong: 'Mon – Sat: 7:00 AM – 9:00 PM',
   hoursSunday: 'Sun & holidays: emergency dispatch 24/7',
-  brandline: 'Same-Day Garage Door Repair Across South Florida',
+  brandline: 'Same-Day Garage Door Repair in Gulf Breeze, FL',
   // Solo se usa como imagen de Open Graph / Twitter y en el JSON-LD:
   // es la miniatura al compartir el enlace, no sale pintada en ninguna pagina.
   heroImage: '/img/hero-garage.jpg',
@@ -44,132 +43,18 @@ export const site = {
 };
 
 /* ==========================================================================
-   Despacho principal (la home) y los cuatro puntos de despacho con pagina
+   Onyx trabaja desde una sola direccion — ya no hay puntos de despacho
+   repartidos por el sur de Florida. Todo lo que fuera "cities" (paginas de
+   ciudad, listas de puntos de despacho) se quito con ese cambio.
    ========================================================================== */
 
 export const mainOffice = {
-  name: 'Miami',
-  addr1: '7950 NW 53rd St, Ste 495',
-  zip: '33166',
-  county: 'Miami-Dade County',
-  mapQuery: '7950 NW 53rd St Ste 495 Miami FL 33166',
-  tag: 'Main Dispatch',
-  coverageMeta: 'Where the trucks start the day · Dispatch line open 24/7',
-  dispatchedFrom: 'Miami dispatch point',
+  name: 'Gulf Breeze',
+  addr1: '911 Gulf Breeze Pkwy, Unit B',
+  zip: '32561',
+  county: 'Santa Rosa County',
+  mapQuery: '911 Gulf Breeze Pkwy Unit B Gulf Breeze FL 32561',
 };
-
-export const cities = [
-  {
-    slug: 'FortLauderdale',
-    name: 'Fort Lauderdale',
-    zip: '33304',
-    addr1: '1520 E Sunrise Blvd, Ste 200',
-    county: 'Broward County',
-    mapQuery: '1520 E Sunrise Blvd Ste 200 Fort Lauderdale FL 33304',
-    tag: 'Broward County',
-    coverageMeta: 'Covering Fort Lauderdale, Wilton Manors, Oakland Park & the beaches',
-    dispatchedFrom: 'Sunrise Boulevard dispatch point',
-    localNote:
-      'East of Federal Highway the salt air does the damage long before the door does. Springs, cables, hinges and rollers corrode years earlier within a mile of the beach, and a door that binds on a humid morning is usually rust on the track, not a broken opener. On coastal jobs we fit galvanized springs, stainless fasteners and sealed rollers so the repair survives the next summer.',
-    services:
-      'Fort Lauderdale runs from 1920s bungalows off Las Olas to new townhouse rows near Sunrise, so we carry both the short-header hardware old detached garages need and the standard sectional parts the newer builds use.',
-    neighborhoods: [
-      'Fort Lauderdale',
-      'Las Olas',
-      'Victoria Park',
-      'Wilton Manors',
-      'Oakland Park',
-      'Lauderdale-by-the-Sea',
-      'Coral Ridge',
-      'Rio Vista',
-      'Sunrise',
-      'Plantation',
-    ],
-  },
-  {
-    slug: 'Weston',
-    name: 'Weston',
-    zip: '33326',
-    addr1: '2141 N Commerce Pkwy, Unit 133',
-    county: 'Broward County',
-    mapQuery: '2141 N Commerce Pkwy Unit 133 Weston FL 33326',
-    tag: 'Broward County',
-    coverageMeta: 'Covering Weston, Davie, Southwest Ranches & Pembroke Pines',
-    dispatchedFrom: 'Commerce Parkway dispatch point',
-    localNote:
-      'Almost every street in Weston sits inside an association, and the association usually has a say in panel style, colour and hardware. We work to those guidelines every week, so a replacement door matches what the community already approved instead of turning into a letter from the board three months later.',
-    services:
-      'Weston is a young city by Florida standards, which means most of the doors we see here are original to the house and hitting the end of their spring cycle at the same time. On a door that age we check the cycle rating before anything else.',
-    neighborhoods: [
-      'Weston',
-      'Bonaventure',
-      'Indian Trace',
-      'Savanna',
-      'Davie',
-      'Southwest Ranches',
-      'Pembroke Pines',
-      'Cooper City',
-      'Miramar',
-      'Sunrise',
-    ],
-  },
-  {
-    slug: 'BocaRaton',
-    name: 'Boca Raton',
-    zip: '33498',
-    addr1: '20283 FL-7, Unit 337',
-    county: 'Palm Beach County',
-    mapQuery: '20283 State Road 7 Unit 337 Boca Raton FL 33498',
-    tag: 'Palm Beach County',
-    coverageMeta: 'Covering west Boca, Parkland, Coconut Creek & Delray Beach',
-    dispatchedFrom: 'State Road 7 dispatch point',
-    localNote:
-      'West Boca is gated community after gated community, each with its own rules on door style, glass inserts and finish. We can match a panel design and colour to what the association already approved, and on the older communities off Glades and Yamato we usually rebuild the hardware rather than sell a door that does not need replacing.',
-    services:
-      'The 1980s and 1990s housing stock out here still runs a lot of original tracks and undersized springs. Replacing worn hardware while the door is still on its rails costs a fraction of what it costs after it comes off them.',
-    neighborhoods: [
-      'Boca Raton',
-      'West Boca',
-      'Boca Falls',
-      'Loggers Run',
-      'Parkland',
-      'Coconut Creek',
-      'Coral Springs',
-      'Delray Beach',
-      'Boynton Beach',
-      'Deerfield Beach',
-    ],
-  },
-  {
-    slug: 'NorthPalmBeach',
-    name: 'North Palm Beach',
-    zip: '33408',
-    addr1: '2000 PGA Blvd, Ste 35212',
-    county: 'Palm Beach County',
-    mapQuery: '2000 PGA Blvd Ste 35212 North Palm Beach FL 33408',
-    tag: 'Palm Beach County',
-    coverageMeta: 'Covering North Palm Beach, Palm Beach Gardens, Juno Beach & Jupiter',
-    dispatchedFrom: 'PGA Boulevard dispatch point',
-    localNote:
-      'This is the northern coastal strip, where the wind zone is unforgiving and a replacement door has to carry the right wind-load rating and permit before anyone bolts it up. Between the ocean and the Intracoastal, standard hardware corrodes fast, so coastal jobs here get galvanized springs and sealed bearings as a matter of course.',
-    services:
-      'Waterfront properties from Juno Beach up to Jupiter Inlet see the worst of it: cables fray, drums pit and the door starts pulling to one side. Caught early that is a morning of work rather than a new door.',
-    neighborhoods: [
-      'North Palm Beach',
-      'Palm Beach Gardens',
-      'Juno Beach',
-      'Jupiter',
-      'Tequesta',
-      'Lake Park',
-      'Singer Island',
-      'Riviera Beach',
-      'Palm Beach Shores',
-      'West Palm Beach',
-    ],
-  },
-];
-
-export const getCity = (slug) => cities.find((c) => c.slug === slug);
 
 /* ==========================================================================
    Navegacion
@@ -199,19 +84,19 @@ export const heroFeatures = [
   { icon: 'clock', title: '24/7 Emergency', text: 'Someone answers at 3 AM' },
   { icon: 'bolt', title: 'Same-Day Service', text: 'Most calls booked today' },
   { icon: 'shieldCheck', title: 'Workmanship Warranty', text: 'In writing, parts and labour' },
-  { icon: 'pin', title: 'All of Miami-Dade', text: 'And Broward and Palm Beach' },
+  { icon: 'pin', title: 'Gulf Breeze & nearby', text: 'Pensacola, Navarre and Milton too' },
 ];
 
 export const heroBadges = [
-  { icon: 'timer', strong: '30–60 min', text: 'Average arrival across Miami' },
+  { icon: 'timer', strong: '30–60 min', text: 'Average arrival in Gulf Breeze' },
   { icon: 'truck', strong: 'We come to you', text: 'Every repair happens at your door' },
 ];
 
 export const stats = [
-  { icon: 'calendar', value: '15+', label: 'Years working South Florida' },
+  { icon: 'calendar', value: '15+', label: 'Years serving the Gulf Coast' },
   { icon: 'doorHouse', value: '38,000+', label: 'Garage doors serviced' },
   { icon: 'clock', value: '24/7', label: 'Dispatch, holidays included' },
-  { icon: 'pin', value: '5', label: 'Dispatch points, Miami to Jupiter' },
+  { icon: 'shieldCheck', value: '100%', label: 'Workmanship guaranteed in writing' },
 ];
 
 export const homeServices = [
@@ -300,36 +185,24 @@ export const steps = [
 ];
 
 export const areaTags = [
-  'Miami',
-  'Doral',
-  'Hialeah',
-  'Miami Springs',
-  'Coral Gables',
-  'Kendall',
-  'Pinecrest',
-  'Miami Beach',
-  'Aventura',
-  'North Miami',
-  'Fort Lauderdale',
-  'Plantation',
-  'Sunrise',
-  'Davie',
-  'Weston',
-  'Pembroke Pines',
-  'Coral Springs',
-  'Boca Raton',
-  'Delray Beach',
-  'Boynton Beach',
-  'West Palm Beach',
-  'Palm Beach Gardens',
-  'Juno Beach',
-  'Jupiter',
+  'Gulf Breeze',
+  'Pensacola',
+  'Pensacola Beach',
+  'Navarre',
+  'Milton',
+  'Pace',
+  'Gonzalez',
+  'Cantonment',
+  'Warrington',
+  'Perdido Key',
+  'Midway',
+  'Avondale',
 ];
 
 export const faq = [
   {
     q: 'How fast can you get to me?',
-    a: 'Across most of Miami-Dade we run same-day, and emergency calls are usually covered within two to four hours. We dispatch from five points between Miami and North Palm Beach, so there is normally a technician close to you whatever the hour.',
+    a: 'Across Gulf Breeze we run same-day, and emergency calls are usually covered within two to four hours. We dispatch from our own location, so there is normally a technician close to you whatever the hour.',
   },
   {
     q: 'Do I need to be home for the repair?',
@@ -341,7 +214,7 @@ export const faq = [
   },
   {
     q: 'Do you install wind-load rated doors?',
-    a: 'Yes. We fit impact and wind-load rated doors that meet Florida building code, including Miami-Dade County approved products for coastal and high-velocity hurricane zones, and we handle the permit and the final inspection.',
+    a: 'Yes. We fit impact and wind-load rated doors that meet Florida building code for coastal and high-velocity hurricane zones, and we handle the permit and the final inspection.',
   },
   {
     q: 'Do you work on commercial properties and associations?',
@@ -359,82 +232,39 @@ export const faq = [
 export const testimonials = [
   {
     name: 'Marisol R.',
-    city: 'Miami',
+    city: 'Gulf Breeze',
     rating: 5,
     text: 'Spring snapped at 6 AM and I had a technician at my door before 9. Explained everything before touching anything and the price on the invoice matched what he quoted on the phone.',
   },
   {
     name: 'Derek H.',
-    city: 'Fort Lauderdale',
+    city: 'Pensacola',
     rating: 5,
     text: 'Opener stopped responding to the remote and I assumed I needed a whole new unit. Turned out to be the logic board. Fixed in one visit, no upsell.',
   },
   {
     name: 'Priya K.',
-    city: 'Weston',
+    city: 'Navarre',
     rating: 4,
     text: 'Had to reschedule once because of a storm, but they called ahead and the tech who eventually came knew our HOA panel rules better than the last company that installed the door.',
   },
   {
     name: 'Álvaro M.',
-    city: 'Boca Raton',
+    city: 'Milton',
     rating: 5,
     text: 'Door was off its track on a Sunday night. Someone actually picked up the phone and a truck was here in under an hour. Opening was secured immediately and the panel replaced the next morning.',
   },
   {
     name: 'Janet W.',
-    city: 'North Palm Beach',
+    city: 'Pace',
     rating: 5,
     text: 'Coastal air had eaten through our old rollers and hinges. They walked me through why the galvanized hardware costs a bit more and it has been silent ever since.',
   },
   {
     name: 'Tomás F.',
-    city: 'Miami',
+    city: 'Gulf Breeze',
     rating: 4,
     text: 'Good communication from booking to the technician texting when he was ten minutes out. Only reason it is not five stars is I had to wait a day for a same-day slot during hurricane season.',
-  },
-];
-
-/* ==========================================================================
-   Paginas de ciudad
-   ========================================================================== */
-
-export const cityServices = [
-  {
-    icon: 'wrench',
-    title: 'Garage Door Repair',
-    sub: 'Springs, cables, rollers, tracks and panels.',
-    checks: ['Same-day where we can', 'All major brands', 'Written workmanship warranty'],
-  },
-  {
-    icon: 'doorHouse',
-    title: 'Garage Door Installation',
-    sub: 'New doors measured and fitted on site.',
-    checks: ['Measured at your door', 'Wind-load rated options', 'Old door hauled away'],
-  },
-  {
-    icon: 'bolt',
-    title: 'Emergency Service',
-    sub: 'Nights, weekends and holidays.',
-    checks: ['24/7 dispatch', 'Opening secured same visit', 'Storm damage'],
-  },
-  {
-    icon: 'shieldCheck',
-    title: 'Maintenance & Tune-Ups',
-    sub: 'The service that stops the 3 AM call.',
-    checks: ['25-point inspection', 'Lubrication & balancing', 'Safety reverse tested'],
-  },
-  {
-    icon: 'opener',
-    title: 'Opener Repair & Install',
-    sub: 'Quiet belt drives and Wi-Fi openers.',
-    checks: ['All major opener brands', 'Sensor alignment', 'App and keypad setup'],
-  },
-  {
-    icon: 'grid',
-    title: 'Spring Replacement',
-    sub: 'Torsion and extension, replaced in pairs.',
-    checks: ['High-cycle springs', 'Balanced installs', 'Safety cables checked'],
   },
 ];
 
@@ -443,8 +273,8 @@ export const cityServices = [
    ========================================================================== */
 
 export const aboutStory = [
-  'Onyx started with one truck and one rule: look at the door in front of you before quoting anything. Too many homeowners were being sold a whole new door when a worn roller and a bent hinge were the actual problem, and the fastest way to build a route in South Florida turned out to be simply not doing that.',
-  'Fifteen years on we dispatch from five points between Miami and North Palm Beach. There are more trucks and more technicians, but the work is still done by people who live in the neighbourhoods they cover — who know which west Boca communities have to approve a panel style, why a Fort Lauderdale door a mile from the beach eats cables, and what the wind zone means north of PGA Boulevard.',
+  'Onyx started with one truck and one rule: look at the door in front of you before quoting anything. Too many homeowners were being sold a whole new door when a worn roller and a bent hinge were the actual problem, and the fastest way to build a route around Gulf Breeze turned out to be simply not doing that.',
+  'Fifteen years on we still work out of the same corner of Santa Rosa County. There are more trucks and more technicians, but the work is still done by people who live in the neighbourhoods they cover — who know which Gulf Breeze communities have a say on panel style, why a door a mile from the water eats cables, and what the wind zone means this close to the coast.',
   'We are not a call centre selling your address on to whoever bids highest. The number on this page reaches our own dispatch desk, and the technician who arrives is on our payroll.',
 ];
 
@@ -457,7 +287,7 @@ export const aboutValues = [
   {
     icon: 'truck',
     title: 'We come to you',
-    text: 'There is no counter and no showroom to drive to. The addresses on this site are dispatch points where the trucks start the day; every repair happens at your property.',
+    text: 'There is no counter and no showroom to drive to. The address on this site is where the trucks start the day; every repair happens at your property.',
   },
   {
     icon: 'clock',
@@ -484,23 +314,23 @@ export const aboutValues = [
 export const aboutTimeline = [
   {
     year: '2011',
-    title: 'One truck in Miami',
-    text: 'Founded as a single-technician residential repair service working Miami-Dade.',
+    title: 'One truck in Gulf Breeze',
+    text: 'Founded as a single-technician residential repair service working Santa Rosa County.',
   },
   {
     year: '2015',
-    title: 'Into Broward',
-    text: 'The Fort Lauderdale point opened and we started taking on rolling steel, loading docks and association work.',
+    title: 'A second truck',
+    text: 'Call volume outgrew one technician, and we started taking on rolling steel, loading docks and association work.',
   },
   {
     year: '2019',
-    title: 'West to Weston, north to Boca',
-    text: 'Two more dispatch points closed the gap across Broward and into southern Palm Beach County.',
+    title: 'Same-day became the standard',
+    text: 'Enough trucks on the road that most calls booked before noon get a technician the same day.',
   },
   {
     year: '2023',
-    title: 'North Palm Beach',
-    text: 'PGA Boulevard finished the map. Every address from Miami to Jupiter now sits inside a single dispatch radius.',
+    title: 'Written warranty on every job',
+    text: 'Every repair and install started carrying a written workmanship warranty as standard, not an upsell.',
   },
 ];
 
@@ -524,13 +354,13 @@ export const contactChannels = [
   {
     icon: 'truck',
     title: 'Book a visit',
-    lines: ['Tell us the city and what the door is doing', 'The technician drives to your door'],
+    lines: ['Tell us what the door is doing', 'The technician drives to your door'],
     cta: 'coverage',
   },
 ];
 
 export const contactBeforeYouCall = [
-  'The city and ZIP where the door is, so we know which dispatch point is closest.',
+  'Your address and ZIP code, so we can plan the fastest route.',
   'What the door is doing: stuck open, stuck closed, off its track, loud, or reversing on its own.',
   'Whether you heard a bang. A loud bang is almost always a torsion spring, and we load the right size before setting off.',
   'The opener brand if you can see it, and roughly how old the door is.',
@@ -550,9 +380,6 @@ export const officeHours = [
 
 export const mapEmbed = (query) =>
   `https://maps.google.com/maps?q=${encodeURIComponent(query)}&t=m&z=15&output=embed`;
-
-export const directionsUrl = (query) =>
-  `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(query)}`;
 
 /* ==========================================================================
    Carrusel horizontal de la home (patron de la referencia att.com)

@@ -416,44 +416,6 @@ address { font-style: normal; }
 .step p { font-size: .95rem; margin-bottom: 0; }
 
 /* ==========================================================================
-   Coverage: los puntos de despacho, como filas de un directorio
-   ========================================================================== */
-.office-list { border-top: 1px solid var(--line); }
-.office-row {
-  display: grid;
-  grid-template-columns: 1.05fr 1.5fr 1.35fr auto;
-  gap: 26px; align-items: center;
-  padding: 26px 22px;
-  border-bottom: 1px solid var(--line);
-  margin: 0 -22px;
-  transition: background .15s ease;
-}
-.office-row:hover { background: var(--bg-soft); }
-.office-row--main { background: var(--bg-soft); }
-.office-row--main:hover { background: var(--bg-tint); }
-.office-row__city { display: flex; flex-direction: column; gap: 7px; }
-.office-row__city strong { font-size: 1.24rem; font-weight: 800; color: var(--ink); letter-spacing: -.02em; }
-.office-row__tag {
-  align-self: flex-start;
-  font-size: .71rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--gold-ink);
-}
-.office-row--main .office-row__tag {
-  background: var(--gold); color: var(--onyx-900);
-  border-radius: 999px; padding: 3px 12px;
-}
-.office-row address { font-size: .97rem; line-height: 1.55; }
-.office-row__meta { font-size: .92rem; color: var(--muted); margin: 0; }
-.office-row__go { justify-self: end; }
-
-.area-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 34px; }
-.area-tags span {
-  background: var(--bg-soft); border-radius: 999px;
-  padding: 8px 17px; font-size: .88rem; font-weight: 600; color: var(--onyx-700);
-}
-.section--soft .area-tags span { background: #fff; }
-
-/* ==========================================================================
    FAQ
    ========================================================================== */
 .faq { border-top: 1px solid var(--line); }
@@ -654,8 +616,6 @@ address { font-style: normal; }
   .steps, .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 26px; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: repeat(2, 1fr); gap: 34px; }
-  .office-row { grid-template-columns: 1fr 1fr; gap: 14px 26px; }
-  .office-row__go { justify-self: start; grid-column: 1 / -1; }
   .page-hero { padding: 46px 0 44px; }
   .cta-band { padding: 42px 0; }
 }
@@ -670,7 +630,6 @@ address { font-style: normal; }
   .hero-tile__actions .btn, .page-hero__actions .btn { width: 100%; }
   .topbar__inner { justify-content: center; text-align: center; }
   .topbar__notes { justify-content: center; }
-  .office-row { grid-template-columns: 1fr; gap: 10px; }
   .cta-band { padding: 34px 0; }
   .cta-band__actions { flex-direction: column; width: 100%; }
   .cta-band__actions .btn { width: 100%; }

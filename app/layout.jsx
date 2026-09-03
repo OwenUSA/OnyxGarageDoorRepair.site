@@ -1,11 +1,10 @@
 import '../css/styles.css';
-import '../css/location.css';
 import { site } from '../data/site';
 
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `Garage Door Repair Miami & South Florida | ${site.brandFirst}`,
+    default: `Garage Door Repair in Gulf Breeze, FL | ${site.brandFirst}`,
     template: `%s | ${site.brandFirst}`,
   },
   applicationName: site.brand,

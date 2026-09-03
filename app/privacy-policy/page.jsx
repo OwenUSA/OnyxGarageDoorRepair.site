@@ -2,7 +2,7 @@ import Link from 'next/link';
 import TopBar from '../../components/TopBar';
 import Header from '../../components/Header';
 import Footer, { CallBar } from '../../components/Footer';
-import { site, cities, mainOffice } from '../../data/site';
+import { site, mainOffice } from '../../data/site';
 
 /* ⚠️ PENDIENTE ANTES DE PUBLICAR: site.privacyEmail sigue siendo un correo
    provisional. Se usa en los apartados 7 y 12.
@@ -11,7 +11,7 @@ import { site, cities, mainOffice } from '../../data/site';
    comprobar antes que sigue cumpliendo. */
 
 const title = 'Privacy Policy';
-const description = `Privacy policy for ${site.brand}: what we collect when you call, text or book a visit in South Florida, how we use it & how to request deletion.`;
+const description = `Privacy policy for ${site.brand}: what we collect when you call, text or book a visit in Gulf Breeze, FL, how we use it & how to request deletion.`;
 
 export const metadata = {
   title,
@@ -27,7 +27,7 @@ export const metadata = {
         url: site.heroImage,
         width: 1200,
         height: 630,
-        alt: `${site.brand} — garage door repair across South Florida`,
+        alt: `${site.brand} — garage door repair in Gulf Breeze, FL`,
       },
     ],
   },
@@ -90,25 +90,17 @@ export default function PrivacyPolicyPage() {
           <p>
             This policy explains what {site.brand} collects when you call us, text us, or ask for a
             garage door visit through this website, what we do with it, and how you can ask us to
-            delete it. It applies to {site.domain} and to every location page on this domain.
+            delete it. It applies to {site.domain}.
           </p>
 
           <h2 id="s1">1. Who we are</h2>
           <p>
-            {site.brand} is a garage door repair and installation company working across Miami-Dade,
-            Broward and Palm Beach County, Florida. We dispatch from {mainOffice.addr1},{' '}
+            {site.brand} is a garage door repair and installation company working across Santa Rosa
+            County, Florida. We dispatch from {mainOffice.addr1},{' '}
             {mainOffice.name}, FL {mainOffice.zip}, and our phone number is{' '}
             <a href={site.phone.href}>{site.phone.long}</a>. In this policy, &ldquo;we&rdquo;,
             &ldquo;us&rdquo; and &ldquo;our&rdquo; mean {site.brand}.
           </p>
-          <p>Our other dispatch points are:</p>
-          <ul>
-            {cities.map((c) => (
-              <li key={c.slug}>
-                {c.addr1}, {c.name}, FL {c.zip}
-              </li>
-            ))}
-          </ul>
 
           <h2 id="s2">2. Information we collect</h2>
           <p>We only collect what we need to schedule and complete a service visit:</p>

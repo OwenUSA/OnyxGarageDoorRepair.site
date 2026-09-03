@@ -5,7 +5,6 @@ import Footer, { CallBar } from '../../components/Footer';
 import { Icon } from '../../components/Icons';
 import {
   site,
-  cities,
   mainOffice,
   contactChannels,
   contactBeforeYouCall,
@@ -14,9 +13,9 @@ import {
   mapEmbed,
 } from '../../data/site';
 
-const title = `Contact ${site.brandFirst} | Garage Door Repair South Florida`;
+const title = `Contact ${site.brandFirst} | Garage Door Repair in Gulf Breeze, FL`;
 const description =
-  'Call or email and a technician drives to your door. One dispatch line for all five points across Miami-Dade, Broward & Palm Beach County, 24 hours a day.';
+  'Call or email and a technician drives to your door. One dispatch line, answered 24 hours a day, holidays included.';
 
 export const metadata = {
   title: { absolute: title },
@@ -31,7 +30,7 @@ export const metadata = {
         url: site.heroImage,
         width: 1200,
         height: 630,
-        alt: `Contact ${site.brand} in South Florida`,
+        alt: `Contact ${site.brand} in Gulf Breeze`,
       },
     ],
   },
@@ -110,9 +109,9 @@ export default function ContactPage() {
                 Talk to a technician, <span>not a phone tree</span>
               </h1>
               <p className="page-hero__lead">
-                One number covers all five dispatch points. Tell us the city and what the door is
-                doing, and we send the closest available technician &mdash; usually the same day, and
-                at any hour if it is an emergency.
+                One number reaches our own dispatch desk. Tell us what the door is doing, and we
+                send the closest available technician &mdash; usually the same day, and at any hour
+                if it is an emergency.
               </p>
               <div className="page-hero__actions">
                 <a className="btn btn--primary btn--lg" href={site.phone.href}>
@@ -165,8 +164,8 @@ export default function ContactPage() {
                   </a>
                 )}
                 {ch.cta === 'coverage' && (
-                  <a className="btn btn--outline btn--block" href="#coverage" style={{ marginTop: 'auto' }}>
-                    See the coverage map
+                  <a className="btn btn--outline btn--block" href="#details" style={{ marginTop: 'auto' }}>
+                    See our location
                   </a>
                 )}
               </article>
@@ -183,7 +182,7 @@ export default function ContactPage() {
               <span className="eyebrow">Coverage</span>
               <h2>Where the trucks start the day</h2>
               <p>
-                Our main dispatch point is in {mainOffice.name}. It is not a shop and there is
+                Our dispatch point is in {mainOffice.name}. It is not a shop and there is
                 nothing to drop off &mdash; every repair happens at your property.
               </p>
             </div>
@@ -213,7 +212,7 @@ export default function ContactPage() {
                   <a href={`mailto:${site.email}`}>{site.email}</a>
                 </li>
                 <li>
-                  <strong>Main dispatch point</strong>
+                  <strong>Dispatch point</strong>
                   <span>
                     {mainOffice.addr1}, {mainOffice.name}, FL {mainOffice.zip}
                   </span>
@@ -246,60 +245,6 @@ export default function ContactPage() {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ PUNTOS DE DESPACHO ============ */}
-      <section className="section" id="coverage">
-        <div className="container">
-          <div className="sec-head">
-            <div className="sec-head__text">
-              <span className="eyebrow">The map</span>
-              <h2>Five dispatch points across South Florida</h2>
-              <p>
-                Every point answers the same number. Pick the one closest to you to see what we
-                handle in that area.
-              </p>
-            </div>
-          </div>
-
-          <div className="office-list">
-            <div className="office-row office-row--main">
-              <div className="office-row__city">
-                <span className="office-row__tag">{mainOffice.tag}</span>
-                <strong>{mainOffice.name}, FL</strong>
-              </div>
-              <address>
-                {mainOffice.addr1}
-                <br />
-                {mainOffice.name}, FL {mainOffice.zip}
-              </address>
-              <p className="office-row__meta">{mainOffice.coverageMeta}</p>
-              <Link className="linkarrow office-row__go" href="/">
-                Miami coverage
-                <Icon name="arrowRight" />
-              </Link>
-            </div>
-
-            {cities.map((c) => (
-              <div className="office-row" key={c.slug}>
-                <div className="office-row__city">
-                  <span className="office-row__tag">{c.county}</span>
-                  <strong>{c.name}, FL</strong>
-                </div>
-                <address>
-                  {c.addr1}
-                  <br />
-                  {c.name}, FL {c.zip}
-                </address>
-                <p className="office-row__meta">{c.coverageMeta}</p>
-                <Link className="linkarrow office-row__go" href={`/${c.slug}`}>
-                  {c.name} page
-                  <Icon name="arrowRight" />
-                </Link>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -351,7 +296,7 @@ export default function ContactPage() {
       </main>
 
       <Footer bottomPath="/contact-us" />
-      <CallBar secondHref="#coverage" secondLabel="Coverage" />
+      <CallBar secondHref="#details" secondLabel="Our Location" />
 
       <script
         type="application/ld+json"

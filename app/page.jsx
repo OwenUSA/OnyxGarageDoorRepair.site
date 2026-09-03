@@ -5,7 +5,6 @@ import Footer, { CallBar } from '../components/Footer';
 import { Icon } from '../components/Icons';
 import {
   site,
-  cities,
   mainOffice,
   heroFeatures,
   promoRail,
@@ -13,27 +12,26 @@ import {
   homeServices,
   whyChecklist,
   steps,
-  areaTags,
   faq,
   officeHours,
   mapEmbed,
   testimonials,
 } from '../data/site';
 
-const title = `Garage Door Repair Miami & South Florida | ${site.brandFirst}`;
+const title = `Garage Door Repair in Gulf Breeze, FL | ${site.brandFirst}`;
 const description =
-  'Same-day garage door repair across Miami-Dade, Broward & Palm Beach County. Springs, openers, off-track doors, new installs. 24/7 emergency dispatch.';
+  'Same-day garage door repair in Gulf Breeze, FL and the surrounding area. Springs, openers, off-track doors, new installs. 24/7 emergency dispatch.';
 
 export const metadata = {
   title: { absolute: title },
   description,
   keywords: [
-    'garage door repair Miami',
+    'garage door repair Gulf Breeze',
     'garage door spring replacement',
     'garage door opener repair',
     'emergency garage door repair',
-    'Fort Lauderdale garage door repair',
-    'South Florida garage door service',
+    'Pensacola garage door repair',
+    'Santa Rosa County garage door service',
   ],
   alternates: { canonical: '/' },
   openGraph: {
@@ -45,7 +43,7 @@ export const metadata = {
         url: site.heroImage,
         width: 1200,
         height: 630,
-        alt: `Residential garage door serviced by ${site.brand} in Miami`,
+        alt: `Residential garage door serviced by ${site.brand} in Gulf Breeze`,
       },
     ],
   },
@@ -70,7 +68,7 @@ const businessLd = {
   email: site.email,
   foundingDate: String(site.founded),
   description:
-    '24/7 garage door repair, spring replacement, opener service and new door installation across Miami and South Florida.',
+    '24/7 garage door repair, spring replacement, opener service and new door installation in Gulf Breeze, FL and the surrounding area.',
   image: `${site.url}${site.heroImage}`,
   logo: `${site.url}${site.logo}`,
   address: {
@@ -90,8 +88,11 @@ const businessLd = {
     },
   ],
   areaServed: [
-    { '@type': 'City', name: 'Miami' },
-    ...cities.map((c) => ({ '@type': 'City', name: c.name })),
+    { '@type': 'City', name: 'Gulf Breeze' },
+    { '@type': 'City', name: 'Pensacola' },
+    { '@type': 'City', name: 'Navarre' },
+    { '@type': 'City', name: 'Milton' },
+    { '@type': 'City', name: 'Pace' },
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -101,20 +102,6 @@ const businessLd = {
       itemOffered: { '@type': 'Service', name: s.title },
     })),
   },
-  department: cities.map((c) => ({
-    '@type': 'HomeAndConstructionBusiness',
-    name: `${site.brand} - ${c.name}`,
-    telephone: site.phone.schema,
-    url: `${site.url}/${c.slug}`,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: c.addr1,
-      addressLocality: c.name,
-      addressRegion: 'FL',
-      postalCode: c.zip,
-      addressCountry: 'US',
-    },
-  })),
 };
 
 const faqLd = {
@@ -150,7 +137,7 @@ export default function HomePage() {
             <div className="hero-tile__copy">
               <span className="eyebrow">24/7 emergency service</span>
               <h1>
-                Garage doors fixed <span>the same day</span>, anywhere in Miami
+                Garage doors fixed <span>the same day</span>, anywhere in Gulf Breeze
               </h1>
               <p className="hero-tile__lead">
                 Broken spring, jammed door or an opener that quit at the worst possible moment. Tell
@@ -169,9 +156,9 @@ export default function HomePage() {
               </div>
 
               <p className="fineprint">
-                Dispatch answered 24 hours a day, holidays included. Service across Miami-Dade,
-                Broward and Palm Beach County. Every repair happens at your property &mdash; there is
-                nothing to drop off.
+                Dispatch answered 24 hours a day, holidays included. Serving Gulf Breeze and the
+                surrounding area. Every repair happens at your property &mdash; there is nothing to
+                drop off.
               </p>
             </div>
           </div>
@@ -222,7 +209,7 @@ export default function HomePage() {
               <h2>Everything that goes wrong with a garage door</h2>
               <p>
                 From a snapped torsion spring at 2 AM to a new wind-load rated door, our technicians
-                handle every residential and commercial job across South Florida.
+                handle every residential and commercial job in the Gulf Breeze area.
               </p>
             </div>
             <Link className="sec-head__link linkarrow" href="/contact-us">
@@ -262,14 +249,14 @@ export default function HomePage() {
             />
             <div className="split__stat">
               <strong>38,000+</strong>
-              <span>Garage doors serviced across South Florida</span>
+              <span>Garage doors serviced in the Gulf Breeze area</span>
             </div>
           </div>
           <div>
             <span className="eyebrow">Why {site.brandFirst}</span>
             <h2>A local crew that actually turns up</h2>
             <p>
-              {site.brand} is a South Florida company staffed by technicians who live in the
+              {site.brand} is a Gulf Breeze company staffed by technicians who live in the
               neighbourhoods they cover. No subcontractors, no lead-selling, and nothing added to the
               invoice that you did not see first.
             </p>
@@ -326,71 +313,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ============ COVERAGE ============ */}
-      <section className="section section--soft" id="coverage">
-        <div className="container">
-          <div className="sec-head">
-            <div className="sec-head__text">
-              <span className="eyebrow">Coverage</span>
-              <h2>Five dispatch points, one number</h2>
-              <p>
-                The trucks start the day at these addresses and finish it at customers&rsquo; doors.
-                There is no counter to visit &mdash; pick the point closest to you to see what we
-                handle in that area.
-              </p>
-            </div>
-            <a className="sec-head__link linkarrow" href={site.phone.href}>
-              {site.phone.display}
-              <Icon name="arrowRight" />
-            </a>
-          </div>
-
-          <div className="office-list">
-            <div className="office-row office-row--main">
-              <div className="office-row__city">
-                <span className="office-row__tag">{mainOffice.tag}</span>
-                <strong>{mainOffice.name}, FL</strong>
-              </div>
-              <address>
-                {mainOffice.addr1}
-                <br />
-                {mainOffice.name}, FL {mainOffice.zip}
-              </address>
-              <p className="office-row__meta">{mainOffice.coverageMeta}</p>
-              <a className="linkarrow office-row__go" href="#contact">
-                Miami coverage
-                <Icon name="arrowRight" />
-              </a>
-            </div>
-
-            {cities.map((c) => (
-              <div className="office-row" key={c.slug}>
-                <div className="office-row__city">
-                  <span className="office-row__tag">{c.county}</span>
-                  <strong>{c.name}, FL</strong>
-                </div>
-                <address>
-                  {c.addr1}
-                  <br />
-                  {c.name}, FL {c.zip}
-                </address>
-                <p className="office-row__meta">{c.coverageMeta}</p>
-                <Link className="linkarrow office-row__go" href={`/${c.slug}`}>
-                  {c.name} page
-                  <Icon name="arrowRight" />
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          <div className="area-tags">
-            {areaTags.map((t) => (
-              <span key={t}>{t}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ============ TESTIMONIOS ============ */}
       <section className="section section--soft" id="testimonials">
         <div className="container">
@@ -425,7 +347,7 @@ export default function HomePage() {
             <div className="sec-head__text">
               <span className="eyebrow">FAQ</span>
               <h2>Garage door questions, answered</h2>
-              <p>The questions our dispatchers hear most often from South Florida homes.</p>
+              <p>The questions our dispatchers hear most often from Gulf Breeze homes.</p>
             </div>
           </div>
 
@@ -480,7 +402,7 @@ export default function HomePage() {
                 </li>
                 <li>
                   <strong>Where the work happens</strong>
-                  <span>At your property, across all of South Florida</span>
+                  <span>At your property, across the Gulf Breeze area</span>
                 </li>
               </ul>
 

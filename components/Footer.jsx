@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Icon } from './Icons';
 import { Logo } from './Header';
-import { site, cities, mainOffice, homeServices } from '../data/site';
+import { site, mainOffice, homeServices } from '../data/site';
 
 const SOCIAL = ['facebook', 'instagram', 'x'];
 
@@ -17,9 +17,8 @@ function Social() {
   );
 }
 
-// `city` es el punto de despacho de la pagina actual, si la pagina es de una ciudad.
-// El despacho principal sale en el pie de TODAS las paginas.
-export default function Footer({ city = null, bottomPath = '' }) {
+// El despacho unico de Onyx sale en el pie de TODAS las paginas.
+export default function Footer({ bottomPath = '' }) {
   return (
     <footer className="footer">
       <div className="container">
@@ -42,16 +41,11 @@ export default function Footer({ city = null, bottomPath = '' }) {
           </div>
 
           <div>
-            <h4>Coverage</h4>
+            <h4>Company</h4>
             <ul>
               <li>
-                <Link href="/">{mainOffice.name}</Link>
+                <Link href="/">Home</Link>
               </li>
-              {cities.map((c) => (
-                <li key={c.slug}>
-                  <Link href={`/${c.slug}`}>{c.name}</Link>
-                </li>
-              ))}
               <li>
                 <Link href="/about-us">About Us</Link>
               </li>
@@ -69,18 +63,7 @@ export default function Footer({ city = null, bottomPath = '' }) {
               <a href={`mailto:${site.email}`}>{site.email}</a>
               <br />
               <br />
-              {city && (
-                <>
-                  <strong className="footer__addr-label">{city.name} dispatch</strong>
-                  <br />
-                  {city.addr1}
-                  <br />
-                  {city.name}, FL {city.zip}
-                  <br />
-                  <br />
-                </>
-              )}
-              <strong className="footer__addr-label">Main dispatch</strong>
+              <strong className="footer__addr-label">Dispatch point</strong>
               <br />
               {mainOffice.addr1}
               <br />
@@ -100,8 +83,8 @@ export default function Footer({ city = null, bottomPath = '' }) {
         <div className="footer__legalblock">
           <p>
             {site.brand} is licensed and insured &mdash; {site.license} &mdash; and a mobile garage
-            door repair and installation service. The addresses on this site are dispatch points, not
-            retail locations: they are where the trucks start the day, and every repair, installation
+            door repair and installation service. The address on this site is a dispatch point, not
+            a retail location: it is where the trucks start the day, and every repair, installation
             and estimate takes place at the customer&rsquo;s property. Service availability and
             arrival times depend on the address, the hour and the work already booked that day.
           </p>

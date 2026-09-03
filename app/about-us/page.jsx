@@ -5,7 +5,6 @@ import Footer, { CallBar } from '../../components/Footer';
 import { Icon } from '../../components/Icons';
 import {
   site,
-  cities,
   mainOffice,
   aboutStory,
   aboutValues,
@@ -14,9 +13,9 @@ import {
   steps,
 } from '../../data/site';
 
-const title = `About ${site.brandFirst} | South Florida Garage Door Repair Company`;
+const title = `About ${site.brandFirst} | Gulf Breeze Garage Door Repair Company`;
 const description =
-  'A South Florida garage door company dispatching from five points, Miami to North Palm Beach, with our own technicians, written estimates & 24/7 emergency cover.';
+  'A Gulf Breeze, FL garage door company with our own technicians, written estimates & 24/7 emergency cover.';
 
 export const metadata = {
   title: { absolute: title },
@@ -31,7 +30,7 @@ export const metadata = {
         url: site.heroImage,
         width: 1200,
         height: 630,
-        alt: `${site.brand} technicians working in South Florida`,
+        alt: `${site.brand} technicians working in Gulf Breeze`,
       },
     ],
   },
@@ -88,14 +87,14 @@ export default function AboutPage() {
                 <span>/</span>
                 About Us
               </p>
-              <span className="eyebrow">Working South Florida since {site.founded}</span>
+              <span className="eyebrow">Working Gulf Breeze since {site.founded}</span>
               <h1>
                 A local garage door crew, <span>not a call centre</span>
               </h1>
               <p className="page-hero__lead">
-                {site.brand} is a South Florida company with its own technicians, its own trucks and
-                its own dispatch desk. We repair and install garage doors across Miami-Dade, Broward
-                and Palm Beach County, and the work always happens at your door.
+                {site.brand} is a Gulf Breeze company with its own technicians, its own trucks and
+                its own dispatch desk. We repair and install garage doors across Santa Rosa County,
+                and the work always happens at your door.
               </p>
               <div className="page-hero__actions">
                 <a className="btn btn--primary btn--lg" href={site.phone.href}>
@@ -138,7 +137,7 @@ export default function AboutPage() {
             />
             <div className="split__stat">
               <strong>38,000+</strong>
-              <span>Garage doors serviced across South Florida</span>
+              <span>Garage doors serviced in the Gulf Breeze area</span>
             </div>
           </div>
           <div>
@@ -186,10 +185,10 @@ export default function AboutPage() {
           <div className="sec-head">
             <div className="sec-head__text">
               <span className="eyebrow">Our history</span>
-              <h2>From one truck to five dispatch points</h2>
+              <h2>From one truck to a full fleet</h2>
               <p>
-                We grew by adding points where our own customers already were, not by buying leads in
-                cities we had never worked.
+                We grew by adding trucks and technicians in Gulf Breeze, not by buying leads in
+                towns we had never worked.
               </p>
             </div>
           </div>
@@ -212,7 +211,7 @@ export default function AboutPage() {
             <div className="sec-head__text">
               <span className="eyebrow">What to expect</span>
               <h2>What a visit from us looks like</h2>
-              <p>The same four steps on every job, at every hour, in every city we cover.</p>
+              <p>The same four steps on every job, at every hour, all around Gulf Breeze.</p>
             </div>
           </div>
           <div className="steps">
@@ -221,64 +220,6 @@ export default function AboutPage() {
                 <span className="step__num">Step {s.n}</span>
                 <h3>{s.title}</h3>
                 <p>{s.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============ DONDE TRABAJAMOS ============ */}
-      <section className="section section--soft" id="coverage">
-        <div className="container">
-          <div className="sec-head">
-            <div className="sec-head__text">
-              <span className="eyebrow">Where we work</span>
-              <h2>Five dispatch points, one number</h2>
-              <p>
-                The trucks start the day at these addresses. There is no counter and no showroom
-                &mdash; wherever you are, the technician drives to your door.
-              </p>
-            </div>
-            <a className="sec-head__link linkarrow" href={site.phone.href}>
-              {site.phone.display}
-              <Icon name="arrowRight" />
-            </a>
-          </div>
-
-          <div className="office-list">
-            <div className="office-row office-row--main">
-              <div className="office-row__city">
-                <span className="office-row__tag">{mainOffice.tag}</span>
-                <strong>{mainOffice.name}, FL</strong>
-              </div>
-              <address>
-                {mainOffice.addr1}
-                <br />
-                {mainOffice.name}, FL {mainOffice.zip}
-              </address>
-              <p className="office-row__meta">{mainOffice.coverageMeta}</p>
-              <Link className="linkarrow office-row__go" href="/">
-                Miami coverage
-                <Icon name="arrowRight" />
-              </Link>
-            </div>
-
-            {cities.map((c) => (
-              <div className="office-row" key={c.slug}>
-                <div className="office-row__city">
-                  <span className="office-row__tag">{c.county}</span>
-                  <strong>{c.name}, FL</strong>
-                </div>
-                <address>
-                  {c.addr1}
-                  <br />
-                  {c.name}, FL {c.zip}
-                </address>
-                <p className="office-row__meta">{c.coverageMeta}</p>
-                <Link className="linkarrow office-row__go" href={`/${c.slug}`}>
-                  {c.name} page
-                  <Icon name="arrowRight" />
-                </Link>
               </div>
             ))}
           </div>
