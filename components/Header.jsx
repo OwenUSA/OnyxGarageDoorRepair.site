@@ -4,14 +4,14 @@ import { site, nav } from '../data/site';
 
 export function Logo({ href = '/', ariaLabel }) {
   return (
-    <Link className="logo" href={href} aria-label={ariaLabel}>
-      <span className="logo__mark">
-        <Icon name="logoOnyx" />
-      </span>
-      <span className="logo__text">
-        <span className="logo__name">{site.brandFirst}</span>
-        <span className="logo__tag">{site.brandRest}</span>
-      </span>
+    <Link className="logo" href={href} aria-label={ariaLabel || `${site.brand} home`}>
+      <img
+        className="logo__img"
+        src="/img/onyx-logo-header.jpg"
+        alt={site.brand}
+        width={480}
+        height={250}
+      />
     </Link>
   );
 }

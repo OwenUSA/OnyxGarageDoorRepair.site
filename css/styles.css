@@ -219,21 +219,7 @@ address { font-style: normal; }
 
 .logo { display: inline-flex; align-items: center; gap: 12px; }
 .logo:hover { text-decoration: none; }
-.logo__mark {
-  width: 42px; height: 42px; border-radius: 50%;
-  background: var(--onyx-900);
-  display: grid; place-items: center; flex: none;
-}
-.logo__mark svg { width: 23px; height: 23px; color: var(--gold); }
-.logo__text { display: flex; flex-direction: column; line-height: 1.05; }
-.logo__name {
-  font-size: 1.32rem; font-weight: 800; color: var(--onyx-900);
-  letter-spacing: .02em; text-transform: uppercase;
-}
-.logo__tag {
-  font-size: .62rem; font-weight: 700; color: var(--muted);
-  letter-spacing: .15em; text-transform: uppercase;
-}
+.logo__img { height: 44px; width: auto; border-radius: 6px; display: block; }
 
 .nav { display: flex; align-items: center; gap: 34px; }
 .nav__list { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; }
@@ -509,10 +495,6 @@ address { font-style: normal; }
 .footer li { margin-bottom: 10px; }
 .footer a { color: #a9a6a0; }
 .footer a:hover { color: var(--gold-light); text-decoration: none; }
-.footer .logo__name { color: #fff; }
-.footer .logo__tag { color: #8f8d88; }
-.footer .logo__mark { background: var(--gold); }
-.footer .logo__mark svg { color: var(--onyx-900); }
 .footer__brandline { margin: 18px 0 20px; max-width: 290px; }
 .footer__social { display: flex; gap: 16px; }
 .footer__social a { color: #a9a6a0; }
