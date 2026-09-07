@@ -16,10 +16,10 @@ export const site = {
   domain: 'onyxgaragedoorrepair.site',
   url: 'https://onyxgaragedoorrepair.site',
   phone: {
-    href: 'tel:+18508526090',
-    display: '(850) 852-6090',
-    long: '1 (850) 852-6090',
-    schema: '+1-850-852-6090',
+    href: 'tel:+12394274221',
+    display: '(239) 427-4221',
+    long: '1 (239) 427-4221',
+    schema: '+1-239-427-4221',
   },
   email: 'service@onyxgaragedoorrepair.site',
   // OJO: correo de privacidad provisional, sustituir por el real antes de publicar
@@ -49,11 +49,11 @@ export const site = {
    ========================================================================== */
 
 export const mainOffice = {
-  name: 'Gulf Breeze',
-  addr1: '911 Gulf Breeze Pkwy, Unit B',
-  zip: '32561',
-  county: 'Santa Rosa County',
-  mapQuery: '911 Gulf Breeze Pkwy Unit B Gulf Breeze FL 32561',
+  name: 'Naples',
+  addr1: '6050 Collier Blvd, Ste 1',
+  zip: '34114',
+  county: 'Collier County',
+  mapQuery: '6050 Collier Blvd Ste 1 Naples FL 34114',
 };
 
 /* ==========================================================================
