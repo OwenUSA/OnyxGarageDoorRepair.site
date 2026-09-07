@@ -16,10 +16,10 @@ export const site = {
   domain: 'onyxgaragedoorrepair.site',
   url: 'https://onyxgaragedoorrepair.site',
   phone: {
-    href: 'tel:+12394274221',
-    display: '(239) 427-4221',
-    long: '1 (239) 427-4221',
-    schema: '+1-239-427-4221',
+    href: 'tel:+18508526090',
+    display: '(850) 852-6090',
+    long: '1 (850) 852-6090',
+    schema: '+1-850-852-6090',
   },
   email: 'service@onyxgaragedoorrepair.site',
   // OJO: correo de privacidad provisional, sustituir por el real antes de publicar
