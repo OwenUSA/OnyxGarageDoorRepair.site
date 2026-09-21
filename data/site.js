@@ -49,11 +49,11 @@ export const site = {
    ========================================================================== */
 
 export const mainOffice = {
-  name: 'Naples',
-  addr1: '6050 Collier Blvd, Ste 1',
-  zip: '34114',
-  county: 'Collier County',
-  mapQuery: '6050 Collier Blvd Ste 1 Naples FL 34114',
+  name: 'Gulf Breeze',
+  addr1: '911 Gulf Breeze Pkwy, Unit B',
+  zip: '32561',
+  county: 'Santa Rosa County',
+  mapQuery: '911 Gulf Breeze Pkwy Unit B Gulf Breeze FL 32561',
 };
 
 /* ==========================================================================
